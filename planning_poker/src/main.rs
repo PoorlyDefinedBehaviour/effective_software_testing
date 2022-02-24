@@ -21,8 +21,8 @@ fn find_extremes(estimates: &[Estimate]) -> Result<(&Estimate, &Estimate), Plann
     });
   }
 
-  let mut highest = &estimates[0];
   let mut lowest = &estimates[0];
+  let mut highest = &estimates[1];
 
   for estimate in estimates.iter() {
     if estimate.estimate < lowest.estimate {
@@ -63,7 +63,30 @@ mod tests {
   }
 
   #[test]
-  fn returns_players_with_lowest_and_highest_estimates() {
+  fn returns_players_with_lowest_and_highest_estimates_when_estimates_are_the_same() {
+    let estimates = vec![
+      Estimate {
+        player: Player::from("player_1"),
+        estimate: 2,
+      },
+      Estimate {
+        player: Player::from("player_2"),
+        estimate: 2,
+      },
+      Estimate {
+        player: Player::from("player_3"),
+        estimate: 2,
+      },
+    ];
+
+    assert_eq!(
+      Ok((&estimates[0], &estimates[1])),
+      find_extremes(&estimates)
+    );
+  }
+
+  #[test]
+  fn returns_players_with_lowest_and_highest_estimates_are_not_the_same() {
     let mut estimates = vec![
       Estimate {
         player: Player::from("player_1"),
