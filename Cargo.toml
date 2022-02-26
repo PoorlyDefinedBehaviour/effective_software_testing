@@ -2,5 +2,6 @@
 
 members = [
   "planning_poker",
-  "substrings_between"
+  "substrings_between",
+  "add_two_numbers"
 ]
