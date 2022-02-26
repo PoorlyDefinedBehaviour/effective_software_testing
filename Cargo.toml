@@ -6,5 +6,6 @@ members = [
   "add_two_numbers",
   "shopping_cart",
   "count_words",
-  "left_pad"
+  "left_pad",
+  "tax_calculator"
 ]
