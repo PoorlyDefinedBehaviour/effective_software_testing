@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+  "planning_poker",
+  "substrings_between"
+]
