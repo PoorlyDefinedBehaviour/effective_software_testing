@@ -245,6 +245,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "shopping_cart"
+version = "0.1.0"
+dependencies = [
+ "typed-builder",
+]
+
+[[package]]
 name = "substrings_between"
 version = "0.1.0"
 dependencies = [
@@ -290,6 +297,17 @@ name = "thiserror-impl"
 version = "1.0.30"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "aa32fd3f627f367fe16f893e2597ae3c05020f8bba2666a4e6ea73d377e5714b"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "typed-builder"
+version = "0.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "89851716b67b937e393b3daa8423e67ddfc4bbbf1654bcf05488e95e0828db0c"
 dependencies = [
  "proc-macro2",
  "quote",

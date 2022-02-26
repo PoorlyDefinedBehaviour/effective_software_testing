@@ -3,5 +3,6 @@
 members = [
   "planning_poker",
   "substrings_between",
-  "add_two_numbers"
+  "add_two_numbers",
+  "shopping_cart"
 ]
