@@ -18,7 +18,7 @@ pub fn add_two_numbers(mut left: Vec<i32>, mut right: Vec<i32>) -> Vec<i32> {
     let right_digit = if right.len() > i { right[i] } else { 0 };
 
     if !(0..=9).contains(&left_digit) || !(0..=9).contains(&right_digit) {
-      unreachable!()
+      panic!("numbers must be between 0 and 9");
     }
 
     let sum = left_digit + right_digit + carry;
@@ -42,6 +42,7 @@ fn main() {
 #[cfg(test)]
 mod tests {
   use super::*;
+  use proptest::prelude::*;
 
   #[test]
   fn empty_lists_should_return_empty_list() {
@@ -76,5 +77,28 @@ mod tests {
     assert_eq!(vec![2, 5], add_two_numbers(vec![3], vec![2, 2]));
     assert_eq!(vec![3, 1], add_two_numbers(vec![2, 2], vec![9]));
     assert_eq!(vec![3, 1], add_two_numbers(vec![9], vec![2, 2]));
+  }
+
+  prop_compose! {
+    fn list_contains_negative_number()(mut xs: Vec<i32>) -> Vec<i32> {
+      if !xs.is_empty() {
+        let i = rand::thread_rng().gen_range(0..xs.len());
+
+        if xs[i] > 0 {
+          xs[i] = -xs[i];
+        }
+      }
+
+      xs
+    }
+  }
+
+  proptest! {
+    #[test]
+    #[should_panic(expected = "numbers must be between 0 and 9")]
+    fn numbers_must_be_between_0_and_9(left in list_contains_negative_number(), right in list_contains_negative_number()) {
+      prop_assume!(!left.is_empty() && !right.is_empty());
+      add_two_numbers(left, right);
+    }
   }
 }

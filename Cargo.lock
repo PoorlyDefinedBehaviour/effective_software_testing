@@ -5,6 +5,10 @@ version = 3
 [[package]]
 name = "add_two_numbers"
 version = "0.1.0"
+dependencies = [
+ "proptest",
+ "rand",
+]
 
 [[package]]
 name = "autocfg"
