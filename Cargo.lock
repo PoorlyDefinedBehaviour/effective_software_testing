@@ -117,6 +117,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "passing_grade"
+version = "0.1.0"
+dependencies = [
+ "proptest",
+]
+
+[[package]]
 name = "planning_poker"
 version = "0.1.0"
 dependencies = [
