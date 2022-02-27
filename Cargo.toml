@@ -10,5 +10,6 @@ members = [
   "tax_calculator",
   "passing_grade",
   "unique",
-  "index_of"
+  "index_of",
+  "stubbing_invoices"
 ]
