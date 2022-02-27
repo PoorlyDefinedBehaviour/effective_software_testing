@@ -9,5 +9,6 @@ members = [
   "left_pad",
   "tax_calculator",
   "passing_grade",
-  "unique"
+  "unique",
+  "index_of"
 ]
