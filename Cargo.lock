@@ -200,6 +200,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "mockall_double"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7dffc15b97456ecc84d2bde8c1df79145e154f45225828c4361f676e1b82acd6"
+dependencies = [
+ "cfg-if",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "normalize-line-endings"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -405,6 +417,15 @@ dependencies = [
 name = "shopping_cart"
 version = "0.1.0"
 dependencies = [
+ "typed-builder",
+]
+
+[[package]]
+name = "stubbing_external_service"
+version = "0.1.0"
+dependencies = [
+ "mockall",
+ "mockall_double",
  "typed-builder",
 ]
 

@@ -11,5 +11,6 @@ members = [
   "passing_grade",
   "unique",
   "index_of",
-  "stubbing_invoices"
+  "stubbing_invoices",
+  "stubbing_external_service"
 ]
