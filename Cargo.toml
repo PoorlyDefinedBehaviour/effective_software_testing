@@ -8,5 +8,6 @@ members = [
   "count_words",
   "left_pad",
   "tax_calculator",
-  "passing_grade"
+  "passing_grade",
+  "unique"
 ]
