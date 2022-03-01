@@ -14,5 +14,6 @@ members = [
   "stubbing_invoices",
   "stubbing_external_service",
   "date_and_time_wrappers",
-  "hexagonal_architecture"
+  "hexagonal_architecture",
+  "tdd_roman_numerals"
 ]
