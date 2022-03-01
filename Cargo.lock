@@ -144,6 +144,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "hexagonal_architecture"
+version = "0.1.0"
+dependencies = [
+ "mockall",
+ "mockall_double",
+ "typed-builder",
+]
+
+[[package]]
 name = "index_of"
 version = "0.1.0"
 dependencies = [

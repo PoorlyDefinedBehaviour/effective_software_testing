@@ -13,5 +13,6 @@ members = [
   "index_of",
   "stubbing_invoices",
   "stubbing_external_service",
-  "date_and_time_wrappers"
+  "date_and_time_wrappers",
+  "hexagonal_architecture"
 ]
