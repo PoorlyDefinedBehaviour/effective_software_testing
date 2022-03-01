@@ -15,5 +15,6 @@ members = [
   "stubbing_external_service",
   "date_and_time_wrappers",
   "hexagonal_architecture",
-  "tdd_roman_numerals"
+  "tdd_roman_numerals",
+  "testing_larger_components_shopping_cart"
 ]
